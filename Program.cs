@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DemoContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DEfaultConnection") ?? throw new InvalidOperationException("Connection String not found."))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection String not found."))
 );
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
